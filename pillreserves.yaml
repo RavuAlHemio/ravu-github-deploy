@@ -1,0 +1,7 @@
+repo: RavuAlHemio/pillreserves
+artifact: pillreserves-release
+systemd-services:
+  - pillreserves.service
+copy-files:
+  - archive-path: pillreserves
+    target-path: /opt/pillreserves/pillreserves

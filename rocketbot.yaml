@@ -1,0 +1,27 @@
+repo: RavuAlHemio/rocketbot
+artifact: rocketbot-release
+systemd-services:
+  - rocketbot.service
+  - rocketbotweb.service
+copy-files:
+  - archive-path: target/release/rocketbot
+    target-path: /var/lib/rocketbot/ravusbot/rocketbot
+  - archive-path: target/release/rocketbotweb
+    target-path: /var/lib/rocketbot/web/rocketbotweb
+  - archive-path: target/release/examples/obtain_bim
+    target-path: /var/lib/rocketbot/ravusbot/obtain_bim
+  - archive-path: rocketbot_plugin_calc/data/unitdb.toml
+    target-path: /var/lib/rocketbot/ravusbot/unitdb.toml
+  - archive-path: CountryCodes.json
+    target-path: /var/lib/rocketbot/ravusbot/CountryCodes.json
+copy-patterns:
+  - pattern: rocketbot_plugin_grammargen/grammars/*.grammar
+    target-dir: /var/lib/rocketbot/ravusbot/grammars/
+  - pattern: rocketbotweb/static/*
+    target-dir: /srv/http/rocketbot-static
+  - pattern: rocketbotweb/templates/*.tera
+    target-dir: /var/lib/rocketbot/web/templates/
+  - pattern: rocketbot_plugin_transliterate/languages/*.json
+    target-dir: /var/lib/rocketbot/ravusbot/transliterate_languages/
+  - pattern: rocketbot_plugin_syllable/rules/*.toml
+    target-dir: /var/lib/rocketbot/ravusbot/syllable_rules/

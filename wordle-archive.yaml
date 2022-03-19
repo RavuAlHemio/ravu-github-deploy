@@ -1,0 +1,7 @@
+repo: RavuAlHemio/wordle-archive
+artifact: wordle-archive-release
+systemd-services:
+  - wordle-archive.service
+copy-files:
+  - archive-path: wordle-archive
+    target-path: /opt/wordle-archive/wordle-archive

@@ -1,0 +1,7 @@
+repo: RavuAlHemio/beepee
+artifact: beepee-release
+systemd-services:
+  - beepee.service
+copy-files:
+  - archive-path: beepee
+    target-path: /opt/beepee/beepee
