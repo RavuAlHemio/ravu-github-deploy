@@ -139,7 +139,7 @@ def main():
     if systemd_services:
         time.sleep(1.5)
         for service in systemd_services:
-            subprocess.run(["sudo", "systemctl", "status", service])
+            subprocess.run(["sudo", "env", "PAGER=", "systemctl", "status", service])
 
 
 if __name__ == "__main__":
