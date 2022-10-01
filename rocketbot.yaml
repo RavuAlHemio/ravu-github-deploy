@@ -8,8 +8,12 @@ copy-files:
     target-path: /var/lib/rocketbot/ravusbot/rocketbot
   - archive-path: target/release/rocketbotweb
     target-path: /var/lib/rocketbot/web/rocketbotweb
-  - archive-path: target/release/examples/obtain_bim
-    target-path: /var/lib/rocketbot/ravusbot/obtain_bim
+  - archive-path: target/release/examples/obtain_bim_mw
+    target-path: /var/lib/rocketbot/ravusbot/obtain_bim_mw
+  - archive-path: target/release/examples/obtain_bim_sa
+    target-path: /var/lib/rocketbot/ravusbot/obtain_bim_sa
+  - archive-path: target/release/examples/obtain_bim_sl
+    target-path: /var/lib/rocketbot/ravusbot/obtain_bim_sl
   - archive-path: rocketbot_plugin_calc/data/unitdb.toml
     target-path: /var/lib/rocketbot/ravusbot/unitdb.toml
   - archive-path: CountryCodes.json
