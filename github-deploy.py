@@ -72,6 +72,11 @@ def main():
     # get the freshest of them all
     response = request(f"https://api.github.com/repos/{config['repo']}/actions/artifacts/{wanted_artifacts[0]['id']}/zip")
     response_zip_bytes = response.content
+    zip_location = config.get("zip-location", None)
+    if zip_location is not None:
+        with open(zip_location, "wb") as f:
+            f.write(response_zip_bytes)
+
     response_zip_io = io.BytesIO(response_zip_bytes)
     response_zip = zipfile.ZipFile(response_zip_io)
 
