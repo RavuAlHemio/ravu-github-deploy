@@ -1,0 +1,5 @@
+repo: RavuAlHemio/rocketbot
+artifact: rocketbot-release-ubuntu-focal
+copy-files:
+  - archive-path: target/release/rocketbot
+    target-path: rocketbot-release-ubuntu-focal
