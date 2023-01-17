@@ -25,8 +25,8 @@ copy-patterns:
     target-dir: /var/lib/rocketbot/ravusbot/grammars/
   - pattern: rocketbotweb/static/*
     target-dir: /srv/http/rocketbot-static
-  - pattern: rocketbotweb/templates/*.tera
-    target-dir: /var/lib/rocketbot/web/templates/
+  - pattern: rocketbotweb/ts/dist/*
+    target-dir: /srv/http/rocketbot-static
   - pattern: rocketbot_plugin_transliterate/languages/*.json
     target-dir: /var/lib/rocketbot/ravusbot/transliterate_languages/
   - pattern: rocketbot_plugin_syllable/rules/*.toml
