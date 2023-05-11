@@ -14,6 +14,8 @@ copy-files:
     target-path: /var/lib/rocketbot/ravusbot/obtain_bim_sa
   - archive-path: target/release/examples/obtain_bim_sl
     target-path: /var/lib/rocketbot/ravusbot/obtain_bim_sl
+  - archive-path: target/release/examples/obtain_bim_xlsx
+    target-path: /var/lib/rocketbot/ravusbot/obtain_bim_xlsx
   - archive-path: target/release/examples/fetch_ops_mw
     target-path: /var/lib/rocketbot/ravusbot/fetch_ops_mw
   - archive-path: rocketbot_plugin_calc/data/unitdb.toml
