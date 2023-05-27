@@ -1,0 +1,7 @@
+repo: RavuAlHemio/bimdatabase
+artifact: bimdatabase-release
+systemd-services:
+  - bimdatabase.service
+copy-files:
+  - archive-path: bimdatabase
+    target-path: /opt/bimdatabase/bimdatabase
