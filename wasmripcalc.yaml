@@ -1,0 +1,8 @@
+repo: RavuAlHemio/ripcalc
+artifact: ripcalc-wasm
+copy-files:
+  - archive-path: target/wasm32-unknown-unknown/release/wasmripcalc.wasm
+    target-path: /srv/http/ondrahosek.com/ripcalc/wasmripcalc.wasm
+copy-patterns:
+  - pattern: wasmripcalc/tsglue/*
+    target-dir: /srv/http/ondrahosek.com/ripcalc/
