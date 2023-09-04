@@ -18,6 +18,8 @@ copy-files:
     target-path: /var/lib/rocketbot/ravusbot/obtain_bim_xlsx
   - archive-path: target/release/examples/fetch_ops_mw
     target-path: /var/lib/rocketbot/ravusbot/fetch_ops_mw
+  - archive-path: target/release/examples/vehicle_db_tool
+    target-path: /var/lib/rocketbot/ravusbot/vehicle_db_tool
   - archive-path: rocketbot_plugin_calc/data/unitdb.toml
     target-path: /var/lib/rocketbot/ravusbot/unitdb.toml
   - archive-path: CountryCodes.json
