@@ -54,6 +54,7 @@ def main():
     # check what artifacts we got
     response = request(f"https://api.github.com/repos/{config['repo']}/actions/artifacts")
     resp_json = response.json()
+    print(resp_json)
     artifact_count = resp_json["total_count"]
     all_artifacts = resp_json["artifacts"]
 
@@ -66,9 +67,19 @@ def main():
         page += 1
 
     # filter and sort
-    wanted_artifacts = [art for art in all_artifacts if art["name"] == config["artifact"]]
+    want_branch = config.get("branch", "")
+    wanted_artifacts = [
+        art for art in all_artifacts
+        if (
+            art["name"] == config["artifact"]
+            and (
+                not want_branch
+                or art["workflow_run"]["head_branch"] == want_branch
+            )
+        )
+    ]
     wanted_artifacts.sort(key=lambda art: art["updated_at"], reverse=True)
-    
+
     # get the freshest of them all
     response = request(f"https://api.github.com/repos/{config['repo']}/actions/artifacts/{wanted_artifacts[0]['id']}/zip")
     response_zip_bytes = response.content

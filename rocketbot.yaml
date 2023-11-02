@@ -1,4 +1,5 @@
 repo: RavuAlHemio/rocketbot
+branch: main
 artifact: rocketbot-release
 systemd-services:
   - rocketbot.service
