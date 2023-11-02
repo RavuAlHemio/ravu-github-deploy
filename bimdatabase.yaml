@@ -3,5 +3,11 @@ artifact: bimdatabase-release
 systemd-services:
   - bimdatabase.service
 copy-files:
-  - archive-path: bimdatabase
+  - archive-path: target/release/bimdatabase
     target-path: /opt/bimdatabase/bimdatabase
+  - archive-path: ts/dist/bimdatabase.js
+    target-path: /opt/bimdatabase/static/bimdatabase.js
+  - archive-path: ts/dist/bimdatabase.js.map
+    target-path: /opt/bimdatabase/static/bimdatabase.js.map
+  - archive-path: ts/src/bimdatabase.ts
+    target-path: /opt/bimdatabase/static/bimdatabase.ts
