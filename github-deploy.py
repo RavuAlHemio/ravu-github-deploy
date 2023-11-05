@@ -54,7 +54,6 @@ def main():
     # check what artifacts we got
     response = request(f"https://api.github.com/repos/{config['repo']}/actions/artifacts")
     resp_json = response.json()
-    print(resp_json)
     artifact_count = resp_json["total_count"]
     all_artifacts = resp_json["artifacts"]
 
