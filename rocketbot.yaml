@@ -11,6 +11,8 @@ copy-files:
     target-path: /var/lib/rocketbot/web/rocketbotweb
   - archive-path: target/release/examples/obtain_bim_mw
     target-path: /var/lib/rocketbot/ravusbot/obtain_bim_mw
+  - archive-path: target/release/examples/obtain_bim_ratb
+    target-path: /var/lib/rocketbot/ravusbot/obtain_bim_ratb
   - archive-path: target/release/examples/obtain_bim_sa
     target-path: /var/lib/rocketbot/ravusbot/obtain_bim_sa
   - archive-path: target/release/examples/obtain_bim_sl
