@@ -19,6 +19,8 @@ copy-files:
     target-path: /var/lib/rocketbot/ravusbot/obtain_bim_sl
   - archive-path: target/release/examples/obtain_bim_xlsx
     target-path: /var/lib/rocketbot/ravusbot/obtain_bim_xlsx
+  - archive-path: target/release/examples/obtain_elements
+    target-path: /var/lib/rocketbot/ravusbot/obtain_elements
   - archive-path: target/release/examples/atom_bimdb_vigilance
     target-path: /var/lib/rocketbot/ravusbot/atom_bimdb_vigilance
   - archive-path: target/release/examples/fetch_ops_mw
