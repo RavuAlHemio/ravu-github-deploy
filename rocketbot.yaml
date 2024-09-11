@@ -9,6 +9,8 @@ copy-files:
     target-path: /var/lib/rocketbot/ravusbot/rocketbot
   - archive-path: target/release/rocketbotweb
     target-path: /var/lib/rocketbot/web/rocketbotweb
+  - archive-path: target/release/examples/obtain_bim_bph
+    target-path: /var/lib/rocketbot/ravusbot/obtain_bim_bph
   - archive-path: target/release/examples/obtain_bim_mw
     target-path: /var/lib/rocketbot/ravusbot/obtain_bim_mw
   - archive-path: target/release/examples/obtain_bim_ratb
