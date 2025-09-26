@@ -1,0 +1,10 @@
+repo: RavuAlHemio/winapi-history
+artifact: winapi-history-archlinux-release
+systemd-services:
+  - winapi-history-web.service
+copy-files:
+  - archive-path: target/release/winapi-history-web
+    target-path: /opt/winapi-history/winapi-history-web
+copy-patterns:
+  - pattern: winapi-history-web/static/os-icons/*
+    target-dir: /opt/winapi-history/static/os-icons
