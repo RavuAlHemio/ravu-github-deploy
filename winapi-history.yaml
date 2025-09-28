@@ -5,6 +5,8 @@ systemd-services:
 copy-files:
   - archive-path: target/release/winapi-history-web
     target-path: /opt/winapi-history/winapi-history-web
+  - archive-path: target/release/whload
+    target-path: /opt/winapi-history/whload
 copy-patterns:
   - pattern: winapi-history-web/static/os-icons/*
     target-dir: /opt/winapi-history/static/os-icons
